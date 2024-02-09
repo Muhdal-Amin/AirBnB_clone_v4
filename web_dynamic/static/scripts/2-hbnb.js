@@ -1,5 +1,6 @@
 $(document).ready(function () {
   checkAmenities();
+  checkApiStatus();
 });
 
 function checkAmenities () {
@@ -14,5 +15,16 @@ function checkAmenities () {
     }
     const amenitNames = Object.keys(amenitList);
     $('.amenities h4').text(amenitNames.sort().join(', '));
+  });
+}
+
+function checkApiStatus () {
+  const url = 'http://127.0.0.1:5001/api/v1/status/';
+  $.get(url, function (data, status) {
+    if (data.status === 'OK' && status === 'success') {
+      $('#api_status').attr('class', 'available');
+    } else {
+      $('#api_status').removeClass('available');
+    }
   });
 }
