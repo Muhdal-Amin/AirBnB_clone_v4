@@ -101,3 +101,11 @@ button:hover {
 .locations:hover .popover {
     visibility: visible;
 }
+
+.chkbx_amenity {
+    margin-right: 10px;
+}
+
+.amenities h4 {
+    height: 16px;
+}
