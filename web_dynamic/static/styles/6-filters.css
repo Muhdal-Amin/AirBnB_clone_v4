@@ -102,10 +102,15 @@ button:hover {
     visibility: visible;
 }
 
-.chkbx_amenity {
+.chkbx_amenity, .chkbx_city {
     margin-right: 10px;
 }
 
-.amenities h4 {
+.locations div ul li h2 {
+    display: inline;
+    margin-left: 10px;
+}
+
+.amenities h4, .locations h4 {
     height: 16px;
 }
